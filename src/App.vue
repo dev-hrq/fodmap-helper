@@ -7,12 +7,17 @@ import foodsData from './data/foods.json'
 import type { FoodDatabase } from './types/food'
 import { flattenFoodDatabase, searchFood } from './utils/foodSearch'
 
+type Theme = 'light' | 'dark'
+
+const themeStorageKey = 'fodmap-helper-theme'
 const query = ref('')
 const selectedCategory = ref<string | null>(null)
 const showBackToTop = ref(false)
+const currentTheme = ref<Theme>('light')
 const foodDatabase = foodsData as FoodDatabase
 const foods = flattenFoodDatabase(foodDatabase)
 const categories = foodDatabase.categories.map((category) => category.namePt)
+let colorSchemeQuery: MediaQueryList | null = null
 
 const filteredByCategory = computed(() => {
   if (!selectedCategory.value) {
@@ -23,9 +28,32 @@ const filteredByCategory = computed(() => {
 })
 
 const results = computed(() => searchFood(filteredByCategory.value, query.value))
+const themeButtonLabel = computed(() =>
+  currentTheme.value === 'dark' ? 'Usar tema claro' : 'Usar tema escuro',
+)
 
 const updateBackToTopVisibility = () => {
   showBackToTop.value = window.scrollY > 360
+}
+
+const applyTheme = (theme: Theme) => {
+  currentTheme.value = theme
+  document.documentElement.dataset.theme = theme
+}
+
+const getDeviceTheme = (): Theme =>
+  window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+
+const syncThemeWithDevice = () => {
+  if (!localStorage.getItem(themeStorageKey)) {
+    applyTheme(getDeviceTheme())
+  }
+}
+
+const toggleTheme = () => {
+  const nextTheme = currentTheme.value === 'dark' ? 'light' : 'dark'
+  localStorage.setItem(themeStorageKey, nextTheme)
+  applyTheme(nextTheme)
 }
 
 const scrollToTop = () => {
@@ -33,11 +61,15 @@ const scrollToTop = () => {
 }
 
 onMounted(() => {
+  colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  applyTheme((localStorage.getItem(themeStorageKey) as Theme | null) ?? getDeviceTheme())
+  colorSchemeQuery.addEventListener('change', syncThemeWithDevice)
   updateBackToTopVisibility()
   window.addEventListener('scroll', updateBackToTopVisibility, { passive: true })
 })
 
 onBeforeUnmount(() => {
+  colorSchemeQuery?.removeEventListener('change', syncThemeWithDevice)
   window.removeEventListener('scroll', updateBackToTopVisibility)
 })
 </script>
@@ -45,8 +77,20 @@ onBeforeUnmount(() => {
 <template>
   <main class="app-shell">
     <section class="app-hero" aria-labelledby="app-title">
-      <h1 id="app-title">FODMAP Helper</h1>
-      <h3 id="app-title"><i>Can I Eat?</i></h3>
+      <div class="app-hero__topline">
+        <div>
+          <h1 id="app-title">FODMAP Helper</h1>
+          <p class="app-hero__tagline"><i>Can I Eat?</i></p>
+        </div>
+        <button
+          type="button"
+          class="theme-toggle"
+          :aria-label="themeButtonLabel"
+          @click="toggleTheme"
+        >
+          {{ currentTheme === 'dark' ? 'Claro' : 'Escuro' }}
+        </button>
+      </div>
       <p class="app-hero__copy">
         Consulta rápida para SII e intolerância à lactose
       </p>
