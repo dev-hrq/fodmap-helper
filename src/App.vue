@@ -28,6 +28,7 @@ const filteredByCategory = computed(() => {
 })
 
 const results = computed(() => searchFood(filteredByCategory.value, query.value))
+const resultCount = computed(() => results.value.length)
 const themeButtonLabel = computed(() =>
   currentTheme.value === 'dark' ? 'Usar tema claro' : 'Usar tema escuro',
 )
@@ -54,6 +55,18 @@ const toggleTheme = () => {
   const nextTheme = currentTheme.value === 'dark' ? 'light' : 'dark'
   localStorage.setItem(themeStorageKey, nextTheme)
   applyTheme(nextTheme)
+}
+
+const updateQuery = (value: string) => {
+  query.value = value
+
+  if (value.trim()) {
+    selectedCategory.value = null
+  }
+}
+
+const selectCategory = (category: string | null) => {
+  selectedCategory.value = category
 }
 
 const scrollToTop = () => {
@@ -99,7 +112,11 @@ onBeforeUnmount(() => {
       </p>
     </section>
 
-    <FoodSearch v-model="query" :result-count="results.length" />
+    <FoodSearch
+      :model-value="query"
+      :result-count="resultCount"
+      @update:model-value="updateQuery"
+    />
 
     <aside class="category-list" aria-labelledby="category-list-title">
       <h2 id="category-list-title">
@@ -112,7 +129,7 @@ onBeforeUnmount(() => {
             type="button"
             class="category-list__button"
             :class="{ 'category-list__button--active': selectedCategory === null }"
-            @click="selectedCategory = null"
+            @click="selectCategory(null)"
           >
             <span class="material-symbols-rounded" aria-hidden="true">apps</span>
             Todas
@@ -123,13 +140,19 @@ onBeforeUnmount(() => {
             type="button"
             class="category-list__button"
             :class="{ 'category-list__button--active': selectedCategory === category }"
-            @click="selectedCategory = category"
+            @click="selectCategory(category)"
           >
             <span class="material-symbols-rounded" aria-hidden="true">label</span>
             {{ category }}
           </button>
         </li>
       </ul>
+      <p v-if="selectedCategory" class="category-list__active">
+        Filtrando por {{ selectedCategory }}.
+        <button type="button" @click="selectCategory(null)">
+          Limpar filtro
+        </button>
+      </p>
     </aside>
 
     <section v-if="results.length" class="results-grid" aria-label="Resultados">
