@@ -1,5 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# FODMAP Helper
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+SPA local para consultar uma base simples de alimentos e visualizar uma indicacao inicial de risco FODMAP por porcao.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Stack
+
+- Vue 3
+- Vite
+- TypeScript
+
+## Funcionalidades desta versao
+
+- Busca local por nome, categoria, porcao, grupo FODMAP, observacoes e aliases.
+- Normalizacao de texto para ignorar diferencas de acentos, caixa e espacos nas buscas.
+- Cards de resultado com categoria, porcao, grupos FODMAP, observacoes e badge de risco.
+- Interface responsiva para desktop e mobile.
+
+## Fora de escopo nesta versao
+
+- Backend
+- Login
+- Banco de dados
+- API remota
+- Historico alimentar
+- Scanner de codigo de barras
+
+## Como validar
+
+```sh
+npm install
+npm run dev
+npm run build
+```
+
+Com o servidor de desenvolvimento rodando, acesse `http://127.0.0.1:5173/`.
