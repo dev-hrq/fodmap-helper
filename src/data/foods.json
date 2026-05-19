@@ -1,0 +1,82 @@
+[
+  {
+    "id": "banana-unripe",
+    "name": "Banana pouco madura",
+    "category": "Frutas",
+    "riskLevel": "low",
+    "servingSize": "1 unidade pequena",
+    "fodmapGroups": ["unknown"],
+    "aliases": ["banana verde"],
+    "notes": "Geralmente melhor tolerada em porcoes pequenas quando ainda esta firme."
+  },
+  {
+    "id": "apple",
+    "name": "Maca",
+    "category": "Frutas",
+    "riskLevel": "high",
+    "servingSize": "1 unidade media",
+    "fodmapGroups": ["fructose", "polyols"],
+    "aliases": ["apple"],
+    "notes": "Pode concentrar frutose e sorbitol."
+  },
+  {
+    "id": "rice-white",
+    "name": "Arroz branco",
+    "category": "Graos e cereais",
+    "riskLevel": "low",
+    "servingSize": "1 xicara cozida",
+    "fodmapGroups": ["unknown"],
+    "aliases": ["arroz"],
+    "notes": "Opcao simples de carboidrato com baixo teor de FODMAP."
+  },
+  {
+    "id": "milk-cow",
+    "name": "Leite de vaca",
+    "category": "Laticinios",
+    "riskLevel": "high",
+    "servingSize": "1 copo",
+    "fodmapGroups": ["lactose"],
+    "aliases": ["leite integral", "leite desnatado"],
+    "notes": "O risco vem principalmente da lactose."
+  },
+  {
+    "id": "lactose-free-milk",
+    "name": "Leite sem lactose",
+    "category": "Laticinios",
+    "riskLevel": "low",
+    "servingSize": "1 copo",
+    "fodmapGroups": ["unknown"],
+    "aliases": ["leite zero lactose"],
+    "notes": "Alternativa comum para quem reage a lactose."
+  },
+  {
+    "id": "onion",
+    "name": "Cebola",
+    "category": "Vegetais",
+    "riskLevel": "high",
+    "servingSize": "Qualquer porcao relevante",
+    "fodmapGroups": ["fructans"],
+    "aliases": ["cebola branca", "cebola roxa"],
+    "notes": "Frequentemente rica em frutanos."
+  },
+  {
+    "id": "carrot",
+    "name": "Cenoura",
+    "category": "Vegetais",
+    "riskLevel": "low",
+    "servingSize": "1 unidade media",
+    "fodmapGroups": ["unknown"],
+    "aliases": [],
+    "notes": "Costuma ser bem tolerada em porcoes usuais."
+  },
+  {
+    "id": "chickpeas-canned",
+    "name": "Grao-de-bico enlatado",
+    "category": "Leguminosas",
+    "riskLevel": "medium",
+    "servingSize": "1/4 de xicara escorrido",
+    "fodmapGroups": ["galactans"],
+    "aliases": ["grao de bico", "chickpeas"],
+    "notes": "Porcoes pequenas e bem escorridas tendem a reduzir o risco."
+  }
+]
