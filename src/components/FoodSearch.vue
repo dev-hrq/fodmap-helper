@@ -19,7 +19,7 @@ const emit = defineEmits<{
         id="food-search-input"
         :value="modelValue"
         type="search"
-        placeholder="Digite feijao, leite, cebola..."
+        placeholder="Digite um alimento, ex: leite, cebola, maçã..."
         autocomplete="off"
         @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />

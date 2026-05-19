@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import EmptyState from './components/EmptyState.vue'
 import FoodResultCard from './components/FoodResultCard.vue'
 import FoodSearch from './components/FoodSearch.vue'
@@ -9,6 +9,7 @@ import { flattenFoodDatabase, searchFood } from './utils/foodSearch'
 
 const query = ref('')
 const selectedCategory = ref<string | null>(null)
+const showBackToTop = ref(false)
 const foodDatabase = foodsData as FoodDatabase
 const foods = flattenFoodDatabase(foodDatabase)
 const categories = foodDatabase.categories.map((category) => category.namePt)
@@ -22,16 +23,32 @@ const filteredByCategory = computed(() => {
 })
 
 const results = computed(() => searchFood(filteredByCategory.value, query.value))
+
+const updateBackToTopVisibility = () => {
+  showBackToTop.value = window.scrollY > 360
+}
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  updateBackToTopVisibility()
+  window.addEventListener('scroll', updateBackToTopVisibility, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateBackToTopVisibility)
+})
 </script>
 
 <template>
   <main class="app-shell">
     <section class="app-hero" aria-labelledby="app-title">
-      <p class="app-hero__eyebrow">FODMAP Helper</p>
-      <h1 id="app-title">Encontre alimentos com mais clareza</h1>
+      <h1 id="app-title">FODMAP Helper</h1>
+      <h3 id="app-title"><i>Can I Eat?</i></h3>
       <p class="app-hero__copy">
-        Busque na base local e veja uma indicacao inicial de risco FODMAP por
-        porcao, com alternativas quando o alimento exigir mais cuidado.
+        Consulta rápida para SII e intolerância à lactose
       </p>
     </section>
 
@@ -73,8 +90,57 @@ const results = computed(() => searchFood(filteredByCategory.value, query.value)
 
     <EmptyState v-else :query="query" />
 
-    <p class="app-disclaimer">
-      Conteudo educativo. A tolerancia varia por pessoa e por porcao.
-    </p>
+    <footer class="app-footer">
+      <p>
+        Uso pessoal e informativo. Não substitui orientação médica ou nutricional.
+      </p>
+      <p class="app-footer__credit">
+        Desenvolvido por Paulo Henrique de Souza.
+        <a
+          href="https://github.com/dev-hrq/fodmap-helper"
+          target="_blank"
+          rel="noreferrer"
+        >
+          dev-hrq/fodmap-helper
+        </a>
+        · Site em constante construção.
+      </p>
+      <p class="app-footer__sources">
+        Fontes:
+        <a
+          href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/28646-pof-2017-2018-brasileiro-ainda-mantem-dieta-a-base-de-arroz-e-feijao-mas-consumo-de-frutas-e-legumes-e-abaixo-do-esperado"
+          target="_blank"
+          rel="noreferrer"
+        >
+          IBGE POF 2017-2018
+        </a>
+        <span aria-hidden="true">·</span>
+        <a
+          href="https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/592d8b94384f3953adc8e73d397c4936.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Tabela POF
+        </a>
+        <span aria-hidden="true">·</span>
+        <a
+          href="https://agenciagov.ebc.com.br/noticias/202403/conheca-os-alimentos-que-compoem-a-nova-cesta-basica"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Cesta básica
+        </a>
+      </p>
+    </footer>
+
+    <button
+      v-if="showBackToTop"
+      type="button"
+      class="back-to-top"
+      aria-label="Voltar ao topo da página"
+      @click="scrollToTop"
+    >
+      ↑
+    </button>
   </main>
 </template>

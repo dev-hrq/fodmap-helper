@@ -49,7 +49,10 @@ const formatLactose = (containsLactose: LactosePresence): string =>
       <p>{{ food.recommendation }}</p>
     </section>
 
-    <p v-if="food.notes" class="food-card__notes">{{ food.notes }}</p>
+    <section v-if="food.notes" class="food-card__notes">
+      <h3>Observação</h3>
+      <p>{{ food.notes }}</p>
+    </section>
 
     <section
       v-if="food.alternatives.length"

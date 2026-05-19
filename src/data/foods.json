@@ -72,6 +72,48 @@
           "riskLevel": "high",
           "recommendation": "avoid_or_test_carefully",
           "notes": "Na tabela fornecida, aparece como alimento alto FODMAP."
+        },
+        {
+          "nameEn": "Cauliflower",
+          "namePt": "Couve-flor",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser alto FODMAP e fermentativo para algumas pessoas com SII."
+        },
+        {
+          "nameEn": "Sugar snap peas",
+          "namePt": "Ervilha-torta",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser alto FODMAP, especialmente em porções maiores."
+        },
+        {
+          "nameEn": "Beetroot",
+          "namePt": "Beterraba",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode depender da porção. Teste quantidades menores e observe sintomas."
+        },
+        {
+          "nameEn": "Cabbage",
+          "namePt": "Repolho",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode causar gases em algumas pessoas, dependendo da porção e preparo."
+        },
+        {
+          "nameEn": "Sweet corn",
+          "namePt": "Milho verde",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode depender da quantidade consumida e da tolerância individual."
+        },
+        {
+          "nameEn": "Tomato",
+          "namePt": "Tomate",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Item comum da cesta básica. Geralmente melhor tolerado em porções usuais."
         }
       ],
       "lowFodmapAlternatives": [
@@ -207,6 +249,62 @@
           "riskLevel": "high",
           "recommendation": "avoid_or_test_carefully",
           "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Very ripe banana",
+          "namePt": "Banana muito madura",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Quanto mais madura, maior a chance de causar sintomas em pessoas sensíveis."
+        },
+        {
+          "nameEn": "Apricot",
+          "namePt": "Damasco",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser alto FODMAP, especialmente em porções maiores ou na versão seca."
+        },
+        {
+          "nameEn": "Fig",
+          "namePt": "Figo",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser fermentativo e piorar sintomas em algumas pessoas."
+        },
+        {
+          "nameEn": "Prunes",
+          "namePt": "Ameixa seca",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Fruta seca com maior chance de causar gases, distensão ou diarreia."
+        },
+        {
+          "nameEn": "Dates",
+          "namePt": "Tâmara",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Fruta seca concentrada que pode ser pior tolerada em SII."
+        },
+        {
+          "nameEn": "Persimmon",
+          "namePt": "Caqui",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode causar sintomas em pessoas sensíveis a FODMAPs."
+        },
+        {
+          "nameEn": "Pear juice",
+          "namePt": "Suco de pera",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Sucos podem concentrar frutose e piorar sintomas em pessoas sensíveis."
+        },
+        {
+          "nameEn": "Mango juice",
+          "namePt": "Suco de manga",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode concentrar açúcares fermentáveis e causar sintomas."
         }
       ],
       "lowFodmapAlternatives": [
@@ -251,6 +349,13 @@
           "riskLevel": "low",
           "recommendation": "usually_ok",
           "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Banana",
+          "namePt": "Banana",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Fruta comum na alimentação brasileira. Geralmente melhor tolerada quando não está muito madura."
         }
       ]
     },
@@ -314,6 +419,70 @@
           "recommendation": "avoid_or_use_lactose_free",
           "containsLactose": true,
           "notes": "Pode conter lactose, salvo versões zero lactose."
+        },
+        {
+          "nameEn": "Cottage cheese",
+          "namePt": "Queijo cottage",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Queijo fresco que pode conter lactose em quantidade relevante."
+        },
+        {
+          "nameEn": "Ricotta cheese",
+          "namePt": "Ricota",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e causar sintomas em pessoas intolerantes."
+        },
+        {
+          "nameEn": "Cream cheese",
+          "namePt": "Cream cheese",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose; prefira versão zero lactose quando disponível."
+        },
+        {
+          "nameEn": "Brazilian cream cheese spread",
+          "namePt": "Requeijão",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e outros ingredientes que variam conforme a marca."
+        },
+        {
+          "nameEn": "Milk powder",
+          "namePt": "Leite em pó",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode concentrar lactose e piorar sintomas em intolerância à lactose."
+        },
+        {
+          "nameEn": "Whey protein concentrate",
+          "namePt": "Whey protein concentrado",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "containsLactose": true,
+          "notes": "Pode conter lactose; versões isoladas ou zero lactose podem ser melhor toleradas."
+        },
+        {
+          "nameEn": "Dairy drinks",
+          "namePt": "Bebidas lácteas",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Podem conter lactose, açúcar e espessantes que variam conforme a composição."
+        },
+        {
+          "nameEn": "Sweetened regular yoghurt",
+          "namePt": "Iogurte comum adoçado",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e açúcar; prefira versão zero lactose se necessário."
         }
       ],
       "lowFodmapAlternatives": [
@@ -392,6 +561,69 @@
           "riskLevel": "high",
           "recommendation": "check_ingredients",
           "notes": "Pode conter alho, cebola, lactose, trigo ou aditivos que irritam o intestino."
+        },
+        {
+          "nameEn": "Black beans",
+          "namePt": "Feijão preto",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Leguminosa que pode ser fermentativa e causar gases ou distensão."
+        },
+        {
+          "nameEn": "Pinto beans",
+          "namePt": "Feijão carioca",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode causar sintomas em SII, especialmente em porções maiores."
+        },
+        {
+          "nameEn": "Lentils",
+          "namePt": "Lentilha",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser fermentativa; algumas pessoas toleram melhor porções pequenas."
+        },
+        {
+          "nameEn": "Chickpeas",
+          "namePt": "Grão-de-bico",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode causar gases e distensão; porções pequenas podem ser melhor toleradas por algumas pessoas."
+        },
+        {
+          "nameEn": "Dried peas",
+          "namePt": "Ervilha seca",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Leguminosa potencialmente fermentativa para pessoas com SII."
+        },
+        {
+          "nameEn": "Whole soybeans",
+          "namePt": "Soja em grãos",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP e causar sintomas em pessoas sensíveis."
+        },
+        {
+          "nameEn": "Plain cooked beef",
+          "namePt": "Carne bovina simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alimento comum no Brasil. Em preparo simples, não costuma ser fonte relevante de FODMAP; molhos e marinadas podem mudar a tolerância."
+        },
+        {
+          "nameEn": "Plain cooked chicken",
+          "namePt": "Frango simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alimento comum. Preferir preparo simples, sem alho, cebola, leite ou molhos irritativos."
+        },
+        {
+          "nameEn": "Plain cooked pork",
+          "namePt": "Carne suína simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Em preparo simples, tende a ser baixo FODMAP. Atenção a embutidos, gordura e temperos."
         }
       ],
       "lowFodmapAlternatives": [
@@ -485,6 +717,104 @@
           "riskLevel": "high",
           "recommendation": "check_ingredients",
           "notes": "Pode conter ingredientes irritativos ou alto FODMAP."
+        },
+        {
+          "nameEn": "Wheat pasta",
+          "namePt": "Macarrão de trigo",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP por conter trigo e frutanos."
+        },
+        {
+          "nameEn": "Wheat crust pizza",
+          "namePt": "Pizza com massa de trigo",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter trigo, queijo com lactose, alho, cebola e molhos irritativos."
+        },
+        {
+          "nameEn": "Wheat couscous",
+          "namePt": "Cuscuz de trigo",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP por conter trigo."
+        },
+        {
+          "nameEn": "Regular cakes",
+          "namePt": "Bolos comuns",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Podem conter trigo, leite, lactose, mel ou frutas secas."
+        },
+        {
+          "nameEn": "Wheat flour pancakes",
+          "namePt": "Panquecas com farinha de trigo",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Podem conter trigo e leite; confira ingredientes e porção."
+        },
+        {
+          "nameEn": "Granola with honey or dried fruit",
+          "namePt": "Granola com mel ou frutas secas",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter mel, frutas secas, trigo ou adoçantes problemáticos."
+        },
+        {
+          "nameEn": "Cereal bars",
+          "namePt": "Barras de cereal",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Podem conter mel, frutas secas, lactose, trigo ou adoçantes."
+        },
+        {
+          "nameEn": "White rice",
+          "namePt": "Arroz branco",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Um dos alimentos mais consumidos no Brasil. Geralmente é baixo FODMAP."
+        },
+        {
+          "nameEn": "Brown rice",
+          "namePt": "Arroz integral",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Geralmente baixo FODMAP, mas a fibra pode influenciar sintomas em algumas pessoas."
+        },
+        {
+          "nameEn": "French bread",
+          "namePt": "Pão de sal",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Muito comum no Brasil, mas costuma ser feito com trigo, que pode ser alto FODMAP por frutanos."
+        },
+        {
+          "nameEn": "Cassava flour",
+          "namePt": "Farinha de mandioca",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Item comum da cesta básica. Pode ser melhor tolerada em porções moderadas."
+        },
+        {
+          "nameEn": "Wheat flour",
+          "namePt": "Farinha de trigo",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP por conter frutanos."
+        },
+        {
+          "nameEn": "Corn flour",
+          "namePt": "Farinha de milho",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Item comum. Pode ser melhor tolerada em porções adequadas."
+        },
+        {
+          "nameEn": "Salted crackers",
+          "namePt": "Biscoito salgado",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter trigo, leite, gordura e aditivos; confira ingredientes."
         }
       ],
       "lowFodmapAlternatives": [
@@ -571,6 +901,83 @@
           "riskLevel": "high",
           "recommendation": "check_ingredients",
           "notes": "Pode conter polióis como sorbitol, manitol, xilitol ou maltitol."
+        },
+        {
+          "nameEn": "Sorbitol",
+          "namePt": "Sorbitol",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Poliól que pode causar gases, distensão ou diarreia em pessoas sensíveis."
+        },
+        {
+          "nameEn": "Mannitol",
+          "namePt": "Manitol",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Poliól com potencial de piorar sintomas gastrointestinais."
+        },
+        {
+          "nameEn": "Xylitol",
+          "namePt": "Xilitol",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Adoçante poliol que pode ter efeito laxativo e irritativo."
+        },
+        {
+          "nameEn": "Maltitol",
+          "namePt": "Maltitol",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Poliól comum em doces sem açúcar; pode causar sintomas em SII."
+        },
+        {
+          "nameEn": "Isomalt",
+          "namePt": "Isomalte",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Poliól usado em produtos diet ou sem açúcar; pode ser mal tolerado."
+        },
+        {
+          "nameEn": "Sugar-free chewing gum",
+          "namePt": "Chiclete sem açúcar",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter polióis como sorbitol, xilitol ou manitol."
+        },
+        {
+          "nameEn": "Diet candies",
+          "namePt": "Balas diet / zero açúcar",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Podem conter polióis com potencial de causar sintomas."
+        },
+        {
+          "nameEn": "Diet soda with polyols",
+          "namePt": "Refrigerante diet com polióis",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Verifique se há polióis ou outros adoçantes que podem irritar o intestino."
+        },
+        {
+          "nameEn": "Fruit juice",
+          "namePt": "Suco de fruta",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Muito consumido no Brasil. Pode concentrar frutose dependendo da fruta e da quantidade."
+        },
+        {
+          "nameEn": "Soft drink",
+          "namePt": "Refrigerante",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode piorar sintomas por gás, açúcar, cafeína ou adoçantes, dependendo da composição."
+        },
+        {
+          "nameEn": "White sugar",
+          "namePt": "Açúcar",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Item da cesta básica. Baixo FODMAP, mas deve ser usado com moderação."
         }
       ],
       "lowFodmapAlternatives": [
@@ -654,6 +1061,277 @@
           "notes": "Alternativa baixa em FODMAP em porções adequadas."
         }
       ]
+    },
+    {
+      "id": "seasonings",
+      "namePt": "Temperos",
+      "nameEn": "Seasonings",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Garlic powder",
+          "namePt": "Alho em pó",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alho é uma fonte comum de frutanos e pode causar sintomas em pessoas com SII."
+        },
+        {
+          "nameEn": "Onion powder",
+          "namePt": "Cebola em pó",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Cebola concentrada pode ser bastante fermentativa para pessoas sensíveis."
+        },
+        {
+          "nameEn": "Chimichurri",
+          "namePt": "Chimichurri",
+          "riskLevel": "medium",
+          "recommendation": "check_ingredients",
+          "notes": "Misturas prontas podem conter alho, cebola, pimenta ou outros ingredientes irritativos."
+        },
+        {
+          "nameEn": "Curry powder",
+          "namePt": "Curry",
+          "riskLevel": "medium",
+          "recommendation": "check_ingredients",
+          "notes": "Mistura de especiarias. Verifique se contém alho, cebola ou pimentas em excesso."
+        },
+        {
+          "nameEn": "Black pepper",
+          "namePt": "Pimenta-do-reino",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Não é necessariamente alto FODMAP, mas pode irritar o intestino em pessoas sensíveis."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Paprika",
+          "namePt": "Páprica",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Especiaria comum. Geralmente melhor tolerada em pequenas quantidades."
+        },
+        {
+          "nameEn": "Oregano",
+          "namePt": "Orégano",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Erva seca comum em pizzas, massas e molhos. Geralmente melhor tolerada."
+        },
+        {
+          "nameEn": "Cumin",
+          "namePt": "Cominho",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Tempero muito usado em feijões e carnes. Teste a quantidade conforme tolerância."
+        },
+        {
+          "nameEn": "Annatto / Urucum",
+          "namePt": "Colorau / Urucum",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Usado para cor e sabor. Geralmente não é fonte relevante de FODMAP."
+        },
+        {
+          "nameEn": "Coriander / Cilantro",
+          "namePt": "Coentro",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Erva comum na culinária brasileira, especialmente no Norte e Nordeste."
+        },
+        {
+          "nameEn": "Parsley",
+          "namePt": "Salsinha",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Erva fresca comum e geralmente melhor tolerada."
+        },
+        {
+          "nameEn": "Basil",
+          "namePt": "Manjericão",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Erva aromática geralmente bem tolerada em porções culinárias."
+        },
+        {
+          "nameEn": "Rosemary",
+          "namePt": "Alecrim",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Erva aromática comum em carnes, batatas e legumes."
+        }
+      ]
+    },
+    {
+      "id": "cheeses",
+      "namePt": "Queijos",
+      "nameEn": "Cheeses",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Brazilian cream cheese spread",
+          "namePt": "Requeijão",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Muito consumido no Brasil. Pode conter lactose e gordura; prefira versão zero lactose se necessário."
+        },
+        {
+          "nameEn": "Cream cheese",
+          "namePt": "Cream cheese",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose; versões zero lactose tendem a ser melhor opção para intolerância."
+        },
+        {
+          "nameEn": "Cottage cheese",
+          "namePt": "Queijo cottage",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Queijo fresco que pode conter lactose em quantidade relevante."
+        },
+        {
+          "nameEn": "Ricotta cheese",
+          "namePt": "Ricota",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e causar sintomas em pessoas intolerantes."
+        },
+        {
+          "nameEn": "Minas frescal cheese",
+          "namePt": "Queijo minas frescal",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Queijo fresco popular no Brasil. Pode conter lactose em quantidade relevante."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Mozzarella cheese",
+          "namePt": "Queijo muçarela",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Um dos queijos mais consumidos no Brasil. Pode ter menos lactose que queijos frescos, mas depende da porção."
+        },
+        {
+          "nameEn": "Prato cheese",
+          "namePt": "Queijo prato",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Queijo comum no Brasil. Teste porção conforme tolerância individual."
+        },
+        {
+          "nameEn": "Minas padrao cheese",
+          "namePt": "Queijo minas padrão",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Pode ser melhor tolerado que queijos frescos, mas varia por marca e porção."
+        },
+        {
+          "nameEn": "Parmesan cheese",
+          "namePt": "Queijo parmesão",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Queijo maturado, geralmente com menor teor de lactose. Teste a porção."
+        },
+        {
+          "nameEn": "Provolone cheese",
+          "namePt": "Queijo provolone",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Queijo maturado que tende a ter menor teor de lactose, mas pode ser gorduroso."
+        },
+        {
+          "nameEn": "Processed cheddar cheese",
+          "namePt": "Queijo cheddar / fundido",
+          "riskLevel": "medium",
+          "recommendation": "check_ingredients",
+          "containsLactose": "low_or_trace",
+          "notes": "Verifique ingredientes, pois versões processadas podem conter leite, lactose ou aditivos."
+        },
+        {
+          "nameEn": "Coalho cheese",
+          "namePt": "Queijo coalho",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Muito comum no Brasil. A tolerância depende da porção, maturação e sensibilidade individual."
+        },
+        {
+          "nameEn": "Brie / Camembert cheese",
+          "namePt": "Queijo brie / camembert",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Queijos maturados tendem a ter menos lactose, mas tolerância individual pode variar."
+        }
+      ]
+    },
+    {
+      "id": "common_ibs_triggers",
+      "namePt": "Gatilhos comuns de SII",
+      "nameEn": "Common IBS triggers",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Coffee / caffeine",
+          "namePt": "Café / cafeína",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Não é necessariamente alto FODMAP, mas cafeína pode estimular o intestino e piorar sintomas em algumas pessoas."
+        },
+        {
+          "nameEn": "Alcohol",
+          "namePt": "Álcool",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode irritar o intestino e piorar sintomas de SII em algumas pessoas."
+        },
+        {
+          "nameEn": "Fried foods",
+          "namePt": "Frituras",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Alimentos gordurosos podem piorar desconforto, gases ou diarreia em algumas pessoas."
+        },
+        {
+          "nameEn": "Very fatty foods",
+          "namePt": "Alimentos muito gordurosos",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Gordura em excesso pode ser gatilho de sintomas mesmo quando o alimento não é alto FODMAP."
+        },
+        {
+          "nameEn": "Spicy foods",
+          "namePt": "Pimenta / comida muito picante",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Pode irritar o intestino e aumentar desconforto em pessoas sensíveis."
+        },
+        {
+          "nameEn": "Soybean oil / vegetable oils",
+          "namePt": "Óleo de soja / óleos vegetais",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "notes": "Item comum da cesta básica. Não é alto FODMAP, mas gordura em excesso pode piorar sintomas em algumas pessoas."
+        },
+        {
+          "nameEn": "Butter",
+          "namePt": "Manteiga",
+          "riskLevel": "medium",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Item da cesta básica. Costuma ter pouca lactose, mas a gordura pode ser gatilho em algumas pessoas."
+        }
+      ],
+      "lowFodmapAlternatives": []
     }
   ]
 }

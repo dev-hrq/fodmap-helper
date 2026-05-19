@@ -313,17 +313,20 @@ h2 {
 }
 
 .food-card__recommendation h3,
+.food-card__notes h3,
 .food-card__alternatives h3 {
   margin: 0 0 10px;
   font-size: 0.95rem;
   line-height: 1.3;
 }
 
-.food-card__recommendation h3 {
+.food-card__recommendation h3,
+.food-card__notes h3 {
   color: var(--accent-strong);
 }
 
-.food-card__recommendation p {
+.food-card__recommendation p,
+.food-card__notes p {
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -364,13 +367,67 @@ h2 {
   line-height: 1.55;
 }
 
-.app-disclaimer {
+.app-footer {
   max-width: 640px;
   margin: 24px auto 0;
   color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.5;
   text-align: center;
+}
+
+.app-footer p {
+  margin-bottom: 0;
+}
+
+.app-footer__sources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.82rem;
+}
+
+.app-footer__credit {
+  margin-top: 8px;
+  font-size: 0.84rem;
+}
+
+.app-footer a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+.app-footer a:hover,
+.app-footer a:focus-visible {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--accent);
+  box-shadow: 0 12px 30px rgba(37, 48, 42, 0.22);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: var(--accent-strong);
+  outline: 3px solid rgba(36, 113, 91, 0.2);
+  outline-offset: 3px;
 }
 
 @media (max-width: 900px) {
@@ -467,8 +524,17 @@ h2 {
     padding: 22px;
   }
 
-  .app-disclaimer {
+  .app-footer {
     margin-top: 18px;
     text-align: left;
+  }
+
+  .app-footer__sources {
+    justify-content: flex-start;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
   }
 }
