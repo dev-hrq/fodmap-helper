@@ -26,7 +26,10 @@ const formatLactose = (containsLactose: LactosePresence): string =>
   <article class="food-card">
     <div class="food-card__header">
       <div>
-        <p class="food-card__category">{{ food.category }}</p>
+        <p class="food-card__category">
+          <span class="material-symbols-rounded" aria-hidden="true">restaurant</span>
+          {{ food.category }}
+        </p>
         <h2>{{ food.name }}</h2>
         <p class="food-card__subtitle">{{ food.nameEn }}</p>
       </div>
@@ -35,22 +38,34 @@ const formatLactose = (containsLactose: LactosePresence): string =>
 
     <dl class="food-card__details">
       <div>
-        <dt>Nivel de incomodo</dt>
+        <dt>
+          <span class="material-symbols-rounded" aria-hidden="true">monitor_heart</span>
+          Nivel de incomodo
+        </dt>
         <dd>{{ irritationLabels[food.irritationLevel] }}</dd>
       </div>
       <div v-if="food.containsLactose !== undefined">
-        <dt>Lactose</dt>
+        <dt>
+          <span class="material-symbols-rounded" aria-hidden="true">local_drink</span>
+          Lactose
+        </dt>
         <dd>{{ formatLactose(food.containsLactose) }}</dd>
       </div>
     </dl>
 
     <section class="food-card__recommendation">
-      <h3>Recomendacao pratica</h3>
+      <h3>
+        <span class="material-symbols-rounded" aria-hidden="true">tips_and_updates</span>
+        Recomendacao pratica
+      </h3>
       <p>{{ food.recommendation }}</p>
     </section>
 
     <section v-if="food.notes" class="food-card__notes">
-      <h3>Observação</h3>
+      <h3>
+        <span class="material-symbols-rounded" aria-hidden="true">info</span>
+        Observação
+      </h3>
       <p>{{ food.notes }}</p>
     </section>
 
@@ -59,7 +74,10 @@ const formatLactose = (containsLactose: LactosePresence): string =>
       class="food-card__alternatives"
       aria-label="Alternativas melhores da mesma categoria"
     >
-      <h3>Alternativas melhores</h3>
+      <h3>
+        <span class="material-symbols-rounded" aria-hidden="true">swap_horiz</span>
+        Alternativas melhores
+      </h3>
       <ul>
         <li v-for="alternative in food.alternatives" :key="alternative">
           {{ alternative }}

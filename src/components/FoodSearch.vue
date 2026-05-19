@@ -12,6 +12,7 @@ const emit = defineEmits<{
 <template>
   <form class="food-search" role="search" @submit.prevent>
     <label class="food-search__label" for="food-search-input">
+      <span class="material-symbols-rounded" aria-hidden="true">search</span>
       Qual alimento voce quer consultar?
     </label>
     <div class="food-search__control">
@@ -30,10 +31,11 @@ const emit = defineEmits<{
         aria-label="Limpar busca"
         @click="emit('update:modelValue', '')"
       >
-        x
+        <span class="material-symbols-rounded" aria-hidden="true">close</span>
       </button>
     </div>
     <p class="food-search__meta">
+      <span class="material-symbols-rounded" aria-hidden="true">list_alt</span>
       {{ resultCount }} alimento{{ resultCount === 1 ? '' : 's' }} na lista
     </p>
   </form>

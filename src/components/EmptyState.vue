@@ -6,7 +6,10 @@ defineProps<{
 
 <template>
   <section class="empty-state" aria-live="polite">
-    <h2>Nao encontramos "{{ query }}"</h2>
+    <h2>
+      <span class="material-symbols-rounded" aria-hidden="true">search_off</span>
+      Nao encontramos "{{ query }}"
+    </h2>
     <p>
       Alimento nao encontrado na base inicial. Tente buscar por outro nome ou
       consulte a composicao do alimento.

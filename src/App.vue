@@ -88,6 +88,9 @@ onBeforeUnmount(() => {
           :aria-label="themeButtonLabel"
           @click="toggleTheme"
         >
+          <span class="material-symbols-rounded" aria-hidden="true">
+            {{ currentTheme === 'dark' ? 'light_mode' : 'dark_mode' }}
+          </span>
           {{ currentTheme === 'dark' ? 'Claro' : 'Escuro' }}
         </button>
       </div>
@@ -99,7 +102,10 @@ onBeforeUnmount(() => {
     <FoodSearch v-model="query" :result-count="results.length" />
 
     <aside class="category-list" aria-labelledby="category-list-title">
-      <h2 id="category-list-title">Categorias disponiveis</h2>
+      <h2 id="category-list-title">
+        <span class="material-symbols-rounded" aria-hidden="true">category</span>
+        Categorias disponiveis
+      </h2>
       <ul>
         <li>
           <button
@@ -108,6 +114,7 @@ onBeforeUnmount(() => {
             :class="{ 'category-list__button--active': selectedCategory === null }"
             @click="selectedCategory = null"
           >
+            <span class="material-symbols-rounded" aria-hidden="true">apps</span>
             Todas
           </button>
         </li>
@@ -118,6 +125,7 @@ onBeforeUnmount(() => {
             :class="{ 'category-list__button--active': selectedCategory === category }"
             @click="selectedCategory = category"
           >
+            <span class="material-symbols-rounded" aria-hidden="true">label</span>
             {{ category }}
           </button>
         </li>
@@ -136,9 +144,11 @@ onBeforeUnmount(() => {
 
     <footer class="app-footer">
       <p>
+        <span class="material-symbols-rounded" aria-hidden="true">health_and_safety</span>
         Uso pessoal e informativo. Não substitui orientação médica ou nutricional.
       </p>
       <p class="app-footer__credit">
+        <span class="material-symbols-rounded" aria-hidden="true">code</span>
         Desenvolvido por Paulo Henrique de Souza.
         <a
           href="https://github.com/dev-hrq/fodmap-helper"
@@ -150,6 +160,7 @@ onBeforeUnmount(() => {
         · Site em constante construção.
       </p>
       <p class="app-footer__sources">
+        <span class="material-symbols-rounded" aria-hidden="true">source</span>
         Fontes:
         <a
           href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/28646-pof-2017-2018-brasileiro-ainda-mantem-dieta-a-base-de-arroz-e-feijao-mas-consumo-de-frutas-e-legumes-e-abaixo-do-esperado"
@@ -184,7 +195,7 @@ onBeforeUnmount(() => {
       aria-label="Voltar ao topo da página"
       @click="scrollToTop"
     >
-      ↑
+      <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
     </button>
   </main>
 </template>
