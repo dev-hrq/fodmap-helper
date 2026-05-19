@@ -2,9 +2,9 @@
 import type { RiskLevel } from '../types/food'
 
 const labels: Record<RiskLevel, string> = {
-  low: 'Baixo FODMAP',
+  low: 'Baixo incomodo',
   medium: 'Atencao',
-  high: 'Alto FODMAP',
+  high: 'Alto incomodo',
 }
 
 defineProps<{

@@ -1,82 +1,659 @@
-[
-  {
-    "id": "banana-unripe",
-    "name": "Banana pouco madura",
-    "category": "Frutas",
-    "riskLevel": "low",
-    "servingSize": "1 unidade pequena",
-    "fodmapGroups": ["unknown"],
-    "aliases": ["banana verde"],
-    "notes": "Geralmente melhor tolerada em porcoes pequenas quando ainda esta firme."
+{
+  "metadata": {
+    "name": "FODMAP Food Classification",
+    "version": "1.0.0",
+    "description": "Base estática inicial para consulta de alimentos por categoria FODMAP, com foco em Síndrome do Intestino Irritável e intolerância à lactose.",
+    "source": "Tabela FODMAP fornecida pelo usuário",
+    "notes": [
+      "Esta base não substitui orientação médica ou nutricional.",
+      "A tolerância pode variar de pessoa para pessoa.",
+      "Alguns alimentos podem depender da quantidade consumida.",
+      "No MVP, a classificação será usada apenas como apoio informativo."
+    ]
   },
-  {
-    "id": "apple",
-    "name": "Maca",
-    "category": "Frutas",
-    "riskLevel": "high",
-    "servingSize": "1 unidade media",
-    "fodmapGroups": ["fructose", "polyols"],
-    "aliases": ["apple"],
-    "notes": "Pode concentrar frutose e sorbitol."
-  },
-  {
-    "id": "rice-white",
-    "name": "Arroz branco",
-    "category": "Graos e cereais",
-    "riskLevel": "low",
-    "servingSize": "1 xicara cozida",
-    "fodmapGroups": ["unknown"],
-    "aliases": ["arroz"],
-    "notes": "Opcao simples de carboidrato com baixo teor de FODMAP."
-  },
-  {
-    "id": "milk-cow",
-    "name": "Leite de vaca",
-    "category": "Laticinios",
-    "riskLevel": "high",
-    "servingSize": "1 copo",
-    "fodmapGroups": ["lactose"],
-    "aliases": ["leite integral", "leite desnatado"],
-    "notes": "O risco vem principalmente da lactose."
-  },
-  {
-    "id": "lactose-free-milk",
-    "name": "Leite sem lactose",
-    "category": "Laticinios",
-    "riskLevel": "low",
-    "servingSize": "1 copo",
-    "fodmapGroups": ["unknown"],
-    "aliases": ["leite zero lactose"],
-    "notes": "Alternativa comum para quem reage a lactose."
-  },
-  {
-    "id": "onion",
-    "name": "Cebola",
-    "category": "Vegetais",
-    "riskLevel": "high",
-    "servingSize": "Qualquer porcao relevante",
-    "fodmapGroups": ["fructans"],
-    "aliases": ["cebola branca", "cebola roxa"],
-    "notes": "Frequentemente rica em frutanos."
-  },
-  {
-    "id": "carrot",
-    "name": "Cenoura",
-    "category": "Vegetais",
-    "riskLevel": "low",
-    "servingSize": "1 unidade media",
-    "fodmapGroups": ["unknown"],
-    "aliases": [],
-    "notes": "Costuma ser bem tolerada em porcoes usuais."
-  },
-  {
-    "id": "chickpeas-canned",
-    "name": "Grao-de-bico enlatado",
-    "category": "Leguminosas",
-    "riskLevel": "medium",
-    "servingSize": "1/4 de xicara escorrido",
-    "fodmapGroups": ["galactans"],
-    "aliases": ["grao de bico", "chickpeas"],
-    "notes": "Porcoes pequenas e bem escorridas tendem a reduzir o risco."
-  }
-]
+  "categories": [
+    {
+      "id": "vegetables",
+      "namePt": "Vegetais",
+      "nameEn": "Vegetables",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Artichoke",
+          "namePt": "Alcachofra",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Asparagus",
+          "namePt": "Aspargo",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Garlic",
+          "namePt": "Alho",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser bastante fermentativo para pessoas com SII."
+        },
+        {
+          "nameEn": "Green peas",
+          "namePt": "Ervilha",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Leek",
+          "namePt": "Alho-poró",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Mushrooms",
+          "namePt": "Cogumelos",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Onion",
+          "namePt": "Cebola",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode ser bastante fermentativa para pessoas com SII."
+        },
+        {
+          "nameEn": "Red capsicum",
+          "namePt": "Pimentão vermelho",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alimento alto FODMAP."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Aubergine / Eggplant",
+          "namePt": "Berinjela",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Green beans",
+          "namePt": "Vagem",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Bok choy",
+          "namePt": "Acelga chinesa / Bok choy",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Green capsicum",
+          "namePt": "Pimentão verde",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Na tabela fornecida, aparece como alternativa baixa FODMAP."
+        },
+        {
+          "nameEn": "Carrot",
+          "namePt": "Cenoura",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Cucumber",
+          "namePt": "Pepino",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Lettuce",
+          "namePt": "Alface",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Potato",
+          "namePt": "Batata",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        }
+      ]
+    },
+    {
+      "id": "fruits",
+      "namePt": "Frutas",
+      "nameEn": "Fruits",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Apples",
+          "namePt": "Maçã",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Apple juice",
+          "namePt": "Suco de maçã",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Cherries",
+          "namePt": "Cerejas",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Dried fruit",
+          "namePt": "Frutas secas",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Mango",
+          "namePt": "Manga",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Nectarines",
+          "namePt": "Nectarina",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Peaches",
+          "namePt": "Pêssego",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Pears",
+          "namePt": "Pera",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Plums",
+          "namePt": "Ameixa",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Watermelon",
+          "namePt": "Melancia",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Cantaloupe",
+          "namePt": "Melão cantaloupe",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Kiwifruit",
+          "namePt": "Kiwi",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Mandarin",
+          "namePt": "Mexerica / Tangerina",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Orange",
+          "namePt": "Laranja",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Pineapple",
+          "namePt": "Abacaxi",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Blueberry",
+          "namePt": "Mirtilo",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        }
+      ]
+    },
+    {
+      "id": "dairy_and_alternatives",
+      "namePt": "Lácteos e alternativas",
+      "nameEn": "Dairy & alternatives",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Cow's milk",
+          "namePt": "Leite de vaca",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode causar sintomas em intolerância à lactose."
+        },
+        {
+          "nameEn": "Custard",
+          "namePt": "Creme / Custard",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose."
+        },
+        {
+          "nameEn": "Evaporated milk",
+          "namePt": "Leite evaporado",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose em maior concentração."
+        },
+        {
+          "nameEn": "Ice cream",
+          "namePt": "Sorvete",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e gordura, fatores que podem piorar sintomas em algumas pessoas."
+        },
+        {
+          "nameEn": "Soy milk made from whole soybeans",
+          "namePt": "Leite de soja feito com grãos inteiros",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "containsLactose": false,
+          "notes": "Não contém lactose, mas pode ser alto FODMAP dependendo da composição."
+        },
+        {
+          "nameEn": "Sweetened condensed milk",
+          "namePt": "Leite condensado",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose e alto teor de açúcar."
+        },
+        {
+          "nameEn": "Yoghurt",
+          "namePt": "Iogurte",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_use_lactose_free",
+          "containsLactose": true,
+          "notes": "Pode conter lactose, salvo versões zero lactose."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Almond milk",
+          "namePt": "Leite de amêndoas",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "containsLactose": false,
+          "notes": "Alternativa sem lactose."
+        },
+        {
+          "nameEn": "Brie / Camembert cheese",
+          "namePt": "Queijo brie / camembert",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Queijos maturados tendem a ter menos lactose, mas tolerância individual pode variar."
+        },
+        {
+          "nameEn": "Feta cheese",
+          "namePt": "Queijo feta",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Pode ter menor teor de lactose, mas depende da porção e tolerância individual."
+        },
+        {
+          "nameEn": "Hard cheeses",
+          "namePt": "Queijos duros / maturados",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "containsLactose": "low_or_trace",
+          "notes": "Geralmente possuem menos lactose, mas não significa tolerância garantida."
+        },
+        {
+          "nameEn": "Lactose-free milk",
+          "namePt": "Leite zero lactose",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "containsLactose": false,
+          "notes": "Alternativa indicada para intolerância à lactose."
+        },
+        {
+          "nameEn": "Soy milk made from soy protein",
+          "namePt": "Leite de soja feito com proteína de soja",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "containsLactose": false,
+          "notes": "Diferente do leite de soja feito com grãos inteiros."
+        }
+      ]
+    },
+    {
+      "id": "protein_sources",
+      "namePt": "Fontes de proteína",
+      "nameEn": "Protein sources",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Most legumes / pulses",
+          "namePt": "Maioria das leguminosas",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser fermentativo para SII. Exemplo: algumas leguminosas podem causar gases e distensão."
+        },
+        {
+          "nameEn": "Some marinated meats / poultry / seafood",
+          "namePt": "Algumas carnes, aves ou frutos do mar marinados",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "O problema pode estar na marinada, como alho, cebola, leite, mel ou outros ingredientes."
+        },
+        {
+          "nameEn": "Some processed meats",
+          "namePt": "Algumas carnes processadas",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter alho, cebola, lactose, trigo ou aditivos que irritam o intestino."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Eggs",
+          "namePt": "Ovos",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Fonte de proteína baixa em FODMAP."
+        },
+        {
+          "nameEn": "Firm tofu",
+          "namePt": "Tofu firme",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Plain cooked meats",
+          "namePt": "Carnes cozidas simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Preferir sem marinadas com alho, cebola ou leite."
+        },
+        {
+          "nameEn": "Plain cooked poultry",
+          "namePt": "Aves cozidas simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Exemplo: frango simples, sem molhos irritativos."
+        },
+        {
+          "nameEn": "Plain cooked seafood",
+          "namePt": "Frutos do mar cozidos simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Preferir preparo simples."
+        },
+        {
+          "nameEn": "Tempeh",
+          "namePt": "Tempeh",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        }
+      ]
+    },
+    {
+      "id": "breads_and_cereals",
+      "namePt": "Pães e cereais",
+      "nameEn": "Breads & cereals",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Wheat based breads",
+          "namePt": "Pães à base de trigo",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP por conter frutanos."
+        },
+        {
+          "nameEn": "Rye based breads",
+          "namePt": "Pães à base de centeio",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP."
+        },
+        {
+          "nameEn": "Barley based breads",
+          "namePt": "Pães à base de cevada",
+          "riskLevel": "high",
+          "recommendation": "test_portion_or_avoid",
+          "notes": "Pode ser alto FODMAP."
+        },
+        {
+          "nameEn": "Breakfast cereals",
+          "namePt": "Cereais matinais",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter trigo, mel, frutas secas ou adoçantes problemáticos."
+        },
+        {
+          "nameEn": "Biscuits",
+          "namePt": "Biscoitos / bolachas",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter trigo, leite, lactose, mel ou adoçantes."
+        },
+        {
+          "nameEn": "Snack products",
+          "namePt": "Salgadinhos / snacks industrializados",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter ingredientes irritativos ou alto FODMAP."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Oats",
+          "namePt": "Aveia",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Pode ser melhor tolerada em porções adequadas."
+        },
+        {
+          "nameEn": "Quinoa flakes",
+          "namePt": "Flocos de quinoa",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa baixa em FODMAP."
+        },
+        {
+          "nameEn": "Quinoa pasta",
+          "namePt": "Macarrão de quinoa",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa sem trigo."
+        },
+        {
+          "nameEn": "Rice pasta",
+          "namePt": "Macarrão de arroz",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa sem trigo."
+        },
+        {
+          "nameEn": "Corn pasta",
+          "namePt": "Macarrão de milho",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Alternativa sem trigo."
+        },
+        {
+          "nameEn": "Plain rice cakes",
+          "namePt": "Bolacha de arroz simples",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Preferir versões simples, sem recheios ou adoçantes."
+        },
+        {
+          "nameEn": "Sourdough spelt bread",
+          "namePt": "Pão sourdough de espelta",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Pode ser melhor tolerado, mas depende da porção."
+        },
+        {
+          "nameEn": "Wheat / rye / barley free breads",
+          "namePt": "Pães sem trigo, centeio ou cevada",
+          "riskLevel": "low",
+          "recommendation": "usually_ok",
+          "notes": "Conferir ingredientes para evitar lactose, mel, alho, cebola ou adoçantes problemáticos."
+        }
+      ]
+    },
+    {
+      "id": "sugars_sweeteners_and_confectionery",
+      "namePt": "Açúcares, adoçantes e doces",
+      "nameEn": "Sugars, sweeteners & confectionery",
+      "highFodmapFoods": [
+        {
+          "nameEn": "High fructose corn syrup",
+          "namePt": "Xarope de milho rico em frutose",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Pode causar sintomas em pessoas sensíveis a FODMAPs."
+        },
+        {
+          "nameEn": "Honey",
+          "namePt": "Mel",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Alimento classificado como alto FODMAP."
+        },
+        {
+          "nameEn": "Sugar free confectionery",
+          "namePt": "Doces sem açúcar",
+          "riskLevel": "high",
+          "recommendation": "check_ingredients",
+          "notes": "Pode conter polióis como sorbitol, manitol, xilitol ou maltitol."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Dark chocolate",
+          "namePt": "Chocolate amargo",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Verificar lactose/leite na composição e testar porção."
+        },
+        {
+          "nameEn": "Maple syrup",
+          "namePt": "Xarope de bordo / Maple syrup",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        },
+        {
+          "nameEn": "Rice malt syrup",
+          "namePt": "Xarope de malte de arroz",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        },
+        {
+          "nameEn": "Table sugar",
+          "namePt": "Açúcar comum",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Baixo FODMAP, mas ainda deve ser usado com moderação."
+        }
+      ]
+    },
+    {
+      "id": "nuts_and_seeds",
+      "namePt": "Castanhas e sementes",
+      "nameEn": "Nuts & seeds",
+      "highFodmapFoods": [
+        {
+          "nameEn": "Cashews",
+          "namePt": "Castanha de caju",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        },
+        {
+          "nameEn": "Pistachios",
+          "namePt": "Pistache",
+          "riskLevel": "high",
+          "recommendation": "avoid_or_test_carefully",
+          "notes": "Na tabela fornecida, aparece como alto FODMAP."
+        }
+      ],
+      "lowFodmapAlternatives": [
+        {
+          "nameEn": "Macadamias",
+          "namePt": "Macadâmia",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        },
+        {
+          "nameEn": "Peanuts",
+          "namePt": "Amendoim",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        },
+        {
+          "nameEn": "Pumpkin seeds / Pepitas",
+          "namePt": "Sementes de abóbora",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        },
+        {
+          "nameEn": "Walnuts",
+          "namePt": "Nozes",
+          "riskLevel": "low",
+          "recommendation": "test_portion",
+          "notes": "Alternativa baixa em FODMAP em porções adequadas."
+        }
+      ]
+    }
+  ]
+}

@@ -4,13 +4,24 @@ import EmptyState from './components/EmptyState.vue'
 import FoodResultCard from './components/FoodResultCard.vue'
 import FoodSearch from './components/FoodSearch.vue'
 import foodsData from './data/foods.json'
-import type { Food } from './types/food'
-import { searchFood } from './utils/foodSearch'
+import type { FoodDatabase } from './types/food'
+import { flattenFoodDatabase, searchFood } from './utils/foodSearch'
 
 const query = ref('')
-const foods = foodsData as Food[]
+const selectedCategory = ref<string | null>(null)
+const foodDatabase = foodsData as FoodDatabase
+const foods = flattenFoodDatabase(foodDatabase)
+const categories = foodDatabase.categories.map((category) => category.namePt)
 
-const results = computed(() => searchFood(foods, query.value))
+const filteredByCategory = computed(() => {
+  if (!selectedCategory.value) {
+    return foods
+  }
+
+  return foods.filter((food) => food.category === selectedCategory.value)
+})
+
+const results = computed(() => searchFood(filteredByCategory.value, query.value))
 </script>
 
 <template>
@@ -20,11 +31,37 @@ const results = computed(() => searchFood(foods, query.value))
       <h1 id="app-title">Encontre alimentos com mais clareza</h1>
       <p class="app-hero__copy">
         Busque na base local e veja uma indicacao inicial de risco FODMAP por
-        porcao.
+        porcao, com alternativas quando o alimento exigir mais cuidado.
       </p>
     </section>
 
     <FoodSearch v-model="query" :result-count="results.length" />
+
+    <aside class="category-list" aria-labelledby="category-list-title">
+      <h2 id="category-list-title">Categorias disponiveis</h2>
+      <ul>
+        <li>
+          <button
+            type="button"
+            class="category-list__button"
+            :class="{ 'category-list__button--active': selectedCategory === null }"
+            @click="selectedCategory = null"
+          >
+            Todas
+          </button>
+        </li>
+        <li v-for="category in categories" :key="category">
+          <button
+            type="button"
+            class="category-list__button"
+            :class="{ 'category-list__button--active': selectedCategory === category }"
+            @click="selectedCategory = category"
+          >
+            {{ category }}
+          </button>
+        </li>
+      </ul>
+    </aside>
 
     <section v-if="results.length" class="results-grid" aria-label="Resultados">
       <FoodResultCard
@@ -34,6 +71,10 @@ const results = computed(() => searchFood(foods, query.value))
       />
     </section>
 
-    <EmptyState v-else />
+    <EmptyState v-else :query="query" />
+
+    <p class="app-disclaimer">
+      Conteudo educativo. A tolerancia varia por pessoa e por porcao.
+    </p>
   </main>
 </template>

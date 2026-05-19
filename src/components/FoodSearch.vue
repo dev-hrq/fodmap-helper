@@ -12,14 +12,14 @@ const emit = defineEmits<{
 <template>
   <form class="food-search" role="search" @submit.prevent>
     <label class="food-search__label" for="food-search-input">
-      Buscar alimento
+      Qual alimento voce quer consultar?
     </label>
     <div class="food-search__control">
       <input
         id="food-search-input"
         :value="modelValue"
         type="search"
-        placeholder="Ex: banana, leite, cebola"
+        placeholder="Digite feijao, leite, cebola..."
         autocomplete="off"
         @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />
@@ -34,7 +34,7 @@ const emit = defineEmits<{
       </button>
     </div>
     <p class="food-search__meta">
-      {{ resultCount }} resultado{{ resultCount === 1 ? '' : 's' }}
+      {{ resultCount }} alimento{{ resultCount === 1 ? '' : 's' }} na lista
     </p>
   </form>
 </template>
